@@ -1,0 +1,5 @@
+SELECT g.Name AS Genre, COUNT(t.TrackId) AS TotalTracks
+FROM Track t
+INNER JOIN Genre g ON t.GenreId = g.GenreId
+GROUP BY g.Name;
+
