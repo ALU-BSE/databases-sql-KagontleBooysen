@@ -1,0 +1,4 @@
+SELECT ArtistId, Name
+FROM Artist
+WHERE ArtistId IN (SELECT ArtistId FROM Album GROUP BY ArtistId HAVING COUNT(*) > 10);
+
