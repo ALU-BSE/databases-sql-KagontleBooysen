@@ -1,0 +1,9 @@
+// Create Users Collection
+db.createCollection("users")
+
+// Create Products Collection
+db.createCollection("products")
+
+// Create Transactions Collection
+db.createCollection("transactions")
+
