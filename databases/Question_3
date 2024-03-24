@@ -1,0 +1,18 @@
+// Insert sample data into Users collection
+db.users.insertMany([
+    { name: "John Doe", email: "john@example.com", password: "password123" },
+    { name: "Jane Smith", email: "jane@example.com", password: "password456" }
+])
+
+// Insert sample data into Products collection
+db.products.insertMany([
+    { name: "Laptop", description: "Powerful laptop with high performance", price: 1200, user_id: ObjectId("user_id_here") },
+    { name: "Smartphone", description: "Latest smartphone with advanced features", price: 800, user_id: ObjectId("user_id_here") }
+])
+
+// Insert sample data into Transactions collection
+db.transactions.insertMany([
+    { buyer_id: ObjectId("buyer_id_here"), product_id: ObjectId("product_id_here"), date: ISODate("2024-03-24"), quantity: 1 },
+    { buyer_id: ObjectId("buyer_id_here"), product_id: ObjectId("product_id_here"), date: ISODate("2024-03-24"), quantity: 2 }
+])
+
