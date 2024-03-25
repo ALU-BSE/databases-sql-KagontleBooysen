@@ -1,13 +1,13 @@
 // Insert sample data into Users collection
 db.users.insertMany([
-    { name: "John Doe", email: "john@example.com", password: "password123" },
-    { name: "Jane Smith", email: "jane@example.com", password: "password456" }
+    { name: "Marvin Ogore", email: "marvinogore2@gmail.com", password: "g5t438897yt5#" },
+    { name: "Ella Jane", email: "jane134453@gmail.com", password: "5678uhbcdcxhioh@ }
 ])
 
 // Insert sample data into Products collection
 db.products.insertMany([
-    { name: "Laptop", description: "Powerful laptop with high performance", price: 1200, user_id: ObjectId("user_id_here") },
-    { name: "Smartphone", description: "Latest smartphone with advanced features", price: 800, user_id: ObjectId("user_id_here") }
+    { name: "Laptop", description: "Powerful laptop with high performance", price: 1200, user_id: ObjectId("CAR_12") },
+    { name: "Smartphone", description: "Latest smartphone with advanced features", price: 800, user_id: ObjectId("Phone_a2") }
 ])
 
 // Insert sample data into Transactions collection
