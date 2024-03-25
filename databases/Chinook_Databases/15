@@ -1,0 +1,4 @@
+SELECT AlbumId, Title
+FROM Album
+WHERE AlbumId IN (SELECT AlbumId FROM Track GROUP BY AlbumId HAVING COUNT(*) = 10);
+

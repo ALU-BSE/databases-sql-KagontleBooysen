@@ -1,0 +1,5 @@
+SELECT a.Title AS AlbumTitle, SUM(t.Milliseconds) AS TotalLengthMillis
+FROM Track t
+INNER JOIN Album a ON t.AlbumId = a.AlbumId
+GROUP BY a.Title;
+

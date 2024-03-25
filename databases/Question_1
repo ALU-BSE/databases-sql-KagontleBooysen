@@ -1,0 +1,29 @@
+Users Collection:
+--------------
+{
+    _id: ObjectId,
+    name: String,
+    email: String,
+    password: String
+}
+
+Products Collection:
+--------------
+{
+    _id: ObjectId,
+    name: String,
+    description: String,
+    price: Number,
+    user_id: ObjectId (reference to Users collection)
+}
+
+Transactions Collection:
+--------------
+{
+    _id: ObjectId,
+    buyer_id: ObjectId (reference to Users collection),
+    product_id: ObjectId (reference to Products collection),
+    date: Date,
+    quantity: Number
+}
+

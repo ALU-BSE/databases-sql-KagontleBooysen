@@ -1,0 +1,21 @@
+// Find all products listed by a specific user
+db.products.find({ user_id: ObjectId("Laptops") })
+
+// Find the total amount spent by a specific user
+db.transactions.aggregate([
+    { $match: { buyer_id: ObjectId("buyer_id_here") } },
+    { $lookup: { from: "products", localField: "product_id", foreignField: "_id", as: "product" } },
+    { $unwind: "$product" },
+    { $group: { _id: null, totalAmount: { $sum: { $multiply: ["$product.price", "$quantity"] } } } }
+])
+
+// Find the top 5 most popular products (products with the most transactions)
+db.transactions.aggregate([
+    { $group: { _id: "$product_id", totalTransactions: { $sum: "$quantity" } } },
+    { $sort: { totalTransactions: -1 } },
+    { $limit: 5 },
+    { $lookup: { from: "products", localField: "_id", foreignField: "_id", as: "product" } },
+    { $unwind: "$product" },
+    { $project: { _id: 0, product_id: "$product._id", name: "$product.name", totalTransactions: 1 } }
+])
+

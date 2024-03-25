@@ -1,0 +1,4 @@
+SELECT * 
+FROM Album
+WHERE ArtistId = (SELECT ArtistId FROM Artist WHERE Name = 'YourArtistName');
+

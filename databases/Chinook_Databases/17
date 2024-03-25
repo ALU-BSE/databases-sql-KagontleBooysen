@@ -1,0 +1,5 @@
+SELECT a.Title AS AlbumTitle, AVG(t.Milliseconds) AS AverageLengthMillis
+FROM Track t
+INNER JOIN Album a ON t.AlbumId = a.AlbumId
+GROUP BY a.Title;
+
