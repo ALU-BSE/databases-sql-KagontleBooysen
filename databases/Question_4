@@ -1,5 +1,5 @@
 // Find all products listed by a specific user
-db.products.find({ user_id: ObjectId("user_id_here") })
+db.products.find({ user_id: ObjectId("Laptops") })
 
 // Find the total amount spent by a specific user
 db.transactions.aggregate([
